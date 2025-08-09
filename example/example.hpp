@@ -58,6 +58,9 @@ int get_midi_device()
 
 int get_audio_device()
 {
+   signal(SIGINT, signal_handler);
+   signal(SIGTERM, signal_handler);
+
    std::cout << "================================================================================" << std::endl;
    std::cout << "Available Audio Devices (ID : \"Name\" inputs/outputs): " << std::endl;
    for (auto const& device : q::audio_device::list())
