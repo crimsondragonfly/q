@@ -24,6 +24,7 @@ set(APP_SOURCES
    delay.cpp
    io_delay.cpp
    midi_monitor.cpp
+   io_pitch_detector.cpp
 )
 
 foreach(sourcefile ${APP_SOURCES})
